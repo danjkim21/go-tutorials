@@ -7,11 +7,17 @@ func main() {
 	var myArray [5]int 
 	myArray[0] = 10
 	myArray[4] = 15
-	fmt.Println(myArray)
+
+	for i, value := range myArray {
+		fmt.Println(i, value)
+	}
 
 	mySlice := []int{3,5,6,7,2,1,32}
 	mySlice = append(mySlice, 122)
-	fmt.Println(mySlice)
+
+	for i, value := range mySlice {
+		fmt.Println(i, value)
+	}
 
 	var myMap map[string]int = make(map[string]int)
 	myMap["adam"] = 12
@@ -19,7 +25,10 @@ func main() {
 	myMap["charlie"] = 14
 
 	fmt.Println("adam is", myMap["adam"], "years old")
-	fmt.Println(myMap)
+
+	for i, value:= range myMap {
+		fmt.Printf("%v is %v years old\n", i, value)
+	}
 
 	for i:=1; i <= 10; i++ {
 		if i == 5 {
